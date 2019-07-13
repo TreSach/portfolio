@@ -1,0 +1,77 @@
+.aboutme {
+    height: 175vh;  
+    background-color: $white;   
+    @include section;
+    margin-top: -30vh;
+    position: relative;
+    z-index: 8;
+    padding: 5rem;
+    margin-top: 15vh;
+
+    @include respond(tabp) {
+        margin-top: -15vh;  
+        padding: 40rem 0;    
+        height: $static;
+        width: 100% !important;    
+    }
+
+
+    /*@include respond(tabp-lg) {
+        padding: 40rem 0;
+        margin-top: -15vh;
+        height: $static; 
+    }*/
+
+    @include respond(tabpscape) {
+        padding: 40rem 0;     
+        height: $static;
+        margin-top: -30vh;  
+    }
+    
+    
+
+    &-img { 
+
+       
+
+        &__comp {
+           
+            margin-top: 15vh;
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            
+            border-radius: 50%;
+             margin-left: 35%;
+
+           @include respond(tabp) {
+            width: 55vw;     
+           margin-top: 0;
+           display: block;
+           margin-left: 20%;
+        }
+
+        @include respond(tabp-lg) {
+            margin-top: 7vh;
+        }
+
+
+        @include respond(tabpscape) {
+            margin-left: 30%;
+        }
+            
+
+            
+    
+        }
+        
+    }
+
+    
+}
+
+
+@include respond(desk) {
+    p.aboutme-text {
+        max-width: $g-width;
+    }
+}

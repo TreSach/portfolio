@@ -1,0 +1,75 @@
+.header {
+    height: 165vh;
+    background-image: linear-gradient(to right bottom,
+    rgba($blue-light, 0.8),
+    rgba($blue-dark, 0.8)),
+    url('../img/back-1.png');
+    position: relative;
+  background-size: cover;
+  background-position: top;
+   z-index: 999;       
+
+@media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+only screen and (min-width: 125em) {
+background-image: linear-gradient(
+to right bottom,
+rgba($blue-light, 0.8),
+rgba($blue-dark, 0.8)),
+url(../img/back-1.JPG);
+
+
+
+}
+
+@include respond(tabpscape) {
+  height: 260vh;
+}
+
+
+  
+    
+  &-text-box {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    
+    }
+
+    &_nav {
+      border-top: 1px solid $gray-dark;
+      padding-top: 2rem;
+      display: inline-block;
+      list-style: none;
+      @include respond(tabp) {
+          width: 100%;
+          text-align: center;
+      }
+  }
+
+  &_item {
+      display: inline-block;
+
+      &:not(:last-child) {
+          margin-right: 1.5rem;
+      }
+  }
+
+  &_link {
+      &:link, &:visited {
+          color: $gray-light-1;
+          text-decoration: none;
+          text-transform: uppercase;
+          display: inline-block;
+          
+      }
+
+  }
+
+  
+}
+
+  
+

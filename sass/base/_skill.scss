@@ -1,0 +1,77 @@
+.skills {
+    padding: 25rem 0;
+   
+    background-image: linear-gradient(to right bottom,
+    rgba($blue-light, 0.8),
+    rgba($blue-dark, 0.8));
+    position: relative;
+  background-size: cover;
+  background-position: top;
+
+ 
+
+@include respond(tabp-lg) {
+
+   padding: 20rem 0;
+ 
+ }
+
+@include respond(tabp) {
+ 
+  padding: 30rem 0;
+  margin-top: 5vh;
+}
+  
+
+//NEW
+
+    &-box {
+    background-color: rgba($white, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($black, .15);
+
+
+
+    
+
+
+    @include respond(tabp) {
+        padding: 3rem;
+        width: 65%;
+        @include centerelement;
+    }
+    
+    @include respond(tabpscape) {
+
+          width: 100%; 
+        
+        }
+    }
+
+    .grad {
+        font-size: 6rem;
+        background-image: linear-gradient(to right bottom,
+    rgba($blue-light, 0.8),
+    rgba($blue-dark, 0.8));
+    background-clip: text;
+    -webkit-background-clip: text;
+
+color: transparent;
+
+@include respond(desk4k) {
+
+    font-size: 9rem;
+  }
+  
+
+@include respond(tabp) {
+    font-size: 10rem;
+}
+
+
+    }
+
+}
