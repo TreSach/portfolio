@@ -1,125 +1,92 @@
 .aboutme {
-    height: 1%;
-    background-color: $white;
-    @include section;
+  height: 1%;
+  background-color: $white;
+  @include section;
+  margin-top: -30vh;
+  position: relative;
+  z-index: 8;
+  padding: 5rem;
+  margin-top: 15vh;
+
+  @include respond(lapt) {
+    height: 185vh;
+  }
+
+  @include respond(desk) {
+    //  padding: 40rem 0;
+    height: 180vh;
+  }
+
+  @include respond(desk4k) {
+    //  padding: 40rem 0;
+    height: 245vh; //325vh
+  }
+
+  @include respond(tabl) {
+    height: 200vh;
+  }
+  @include respond(tabp-lg) {
+    padding: 40rem 0;
+    margin-top: -15vh;
+  }
+
+  @include respond(tabpscape) {
+    padding: 40rem 0;
+    height: 350vh;
     margin-top: -30vh;
-    position: relative;
-    z-index: 8;
-    padding: 5rem;
-    margin-top: 15vh;
+  }
 
-    @include respond(lapt) {
-        height: 185vh;
-    }
+  @include respond(tabp) {
+    margin-top: -15vh;
+    padding: 40rem 0;
+  }
 
-      //NEW
-    @include respond(desk) {
-        //  padding: 40rem 0;
-          height: 180vh;
-  
+  @include respond(phone) {
+    height: 1%;
+  }
+
+  &-img {
+    &__comp {
+      margin-top: 15vh;
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      border-radius: 50%;
+      margin-left: 35%;
+
+      @include respond(desk) {
+        width: 35%;
+        margin-left: 30vw;
+      }
+      @include respond(desk4k) {
+        margin-left: 25vw;
       }
 
-       //NEW
-       @include respond(desk4k) {
-        //  padding: 40rem 0;
-          height: 245vh; //325vh
-  
+      @include respond(tabp) {
+        width: 55vw;
+        margin-top: 0;
+        display: block;
+        margin-left: 20%;
       }
 
-   
-    @include respond(tabl) {
-        height: 200vh;
+      @include respond(tabp-lg) {
+        margin-top: 7vh;
+      }
+
+      @include respond(tabpscape) {
+        margin-left: 30%;
+      }
     }
-    @include respond(tabp-lg) {
-       
-        padding: 40rem 0;
-        margin-top: -15vh; //Update
-    }
-
-    @include respond(tabpscape) {
-        padding: 40rem 0;
-        height: 350vh;
-        margin-top: -30vh;
-    }
-
-    @include respond(tabp) {
-        margin-top: -15vh;
-        padding: 40rem 0;
-    }
-
-    @include respond(phone) {
-       height: 1%;
-    }
-
-
-   
-
-   
-
-  
-
-
-    &-img {
-
-
-
-        &__comp {
-
-            margin-top: 15vh;
-            -webkit-clip-path: circle(50% at 50% 50%);
-            clip-path: circle(50% at 50% 50%);
-
-            border-radius: 50%;
-             margin-left: 35%;
-
-            //NEW
-            @include respond(desk) {
-            width: 35%;
-            margin-left: 30vw;
-             }
-             @include respond(desk4k) {
-    
-                margin-left: 25vw;
-            }
-        
-
-           @include respond(tabp) {
-            width: 55vw;
-           margin-top: 0;
-           display: block;
-           margin-left: 20%;
-        }
-
-        @include respond(tabp-lg) {
-            margin-top: 7vh;
-        }
-
-
-
-        @include respond(tabpscape) {
-            margin-left: 30%;
-        }
-
-
-        
-
-
-        }
-
-    }
-
-
+  }
 }
 
-//NEW
 @include respond(desk) {
-    p.aboutme-text {
-        max-width: $g-width*1.9;
-    }
+  p.aboutme-text {
+    max-width: $g-width * 1.9;
+  }
 }
-//NEW
+
 @include respond(desk4k) {
-    p.aboutme-text {
-        max-width: $g-width*2.5;
-    }
+  p.aboutme-text {
+    max-width: $g-width * 2.5;
+  }
 }

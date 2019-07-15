@@ -1,70 +1,70 @@
 .footer {
-    background-color: $gray-dark-3;
-    padding: 10rem 0;
+  background-color: $gray-dark-3;
+  padding: 10rem 0;
+  font-size: 2rem;
+  color: $gray-light-1;
+
+  @include respond(tabp) {
+    font-size: 3rem;
+    padding: 8rem 0;
+  }
+
+  &-logo {
+    @include respond(tabp) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &_logo_c {
+    @include respond(desk4k) {
+      width: 15%;
+    }
+  }
+
+  &_nav {
+    border-top: 1px solid $gray-dark;
+    padding-top: 2rem;
+    display: inline-block;
+    list-style: none;
+    
+    @include respond(tabp) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &_item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &_link {
+    &:link,
+    &:visited {
+      color: $gray-light-1;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+    }
+
+    &:hover,
+    &:active {
+      color: $red-prim;
+      box-shadow: 0 1rem 2rem ($black, 0.4);
+    }
+  }
+
+  &_copyright {
     font-size: 2rem;
-    color: $gray-light-1;
+    border-top: 1px solid $gray-dark;
+    float: right;
 
     @include respond(tabp) {
-        font-size: 3rem;
-        padding: 8rem 0;
+      width: 100%;
+      float: none;
     }
-
-    &-logo {
-        @include respond(tabp) {
-            margin-bottom: 6rem;
-        }
-    }
-
-    &_logo_c {
-      @include respond(desk4k) {
-
-        width: 15%;
-    }
-    }
-
-
-    &_nav {
-        border-top: 1px solid $gray-dark;
-        padding-top: 2rem;
-        display: inline-block;
-        list-style: none;
-        @include respond(tabp) {
-            width: 100%;
-            text-align: center;
-        }
-    }
-
-    &_item {
-        display: inline-block;
-
-        &:not(:last-child) {
-            margin-right: 1.5rem;
-        }
-    }
-
-    &_link {
-        &:link, &:visited {
-            color: $gray-light-1;
-            text-decoration: none;
-            text-transform: uppercase;
-            display: inline-block;
-
-        }
-
-        &:hover, &:active {
-            color: $blue-prim;
-            box-shadow: 0 1rem 2rem ($black, .4);
-        }
-    }
-
-    &_copyright {
-        font-size: 2rem;
-        border-top: 1px solid $gray-dark;
-        float: right;
-
-        @include respond(tabp) {
-            width: 100%;
-            float: none;
-        }
-    }
+  }
 }

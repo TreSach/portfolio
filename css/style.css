@@ -60,7 +60,7 @@ body {
     display: block;
     font-size: 2.2rem;
     font-weight: 700;
-    letter-spacing: .5rem; }
+    letter-spacing: 0.5rem; }
     @media only screen and (max-width: 56.25em) and (orientation: landscape) {
       .h1-subtext {
         font-size: 4rem; } }
@@ -69,17 +69,17 @@ body {
         font-size: 2rem; } }
     @media only screen and (max-width: 37.5em) {
       .h1-subtext {
-        letter-spacing: .5rem; } }
+        letter-spacing: 0.5rem; } }
 
 .h2 {
   font-size: 8rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #55beff, #0410b6);
+  background-image: linear-gradient(to right, #f12828, #951b1b);
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem; }
+  letter-spacing: 0.2rem; }
   @media only screen and (max-width: 56.25em) {
     .h2 {
       font-size: 7rem; } }
@@ -141,12 +141,12 @@ p {
       font-size: 2.8rem; } }
 
 .txt-link:link, .txt-link:visited {
-  color: #0410b6;
+  color: #951b1b;
   text-decoration: none;
   display: inline-block; }
 
 .txt-link:hover, .txt-link:active {
-  color: #55beff; }
+  color: #f12828; }
 
 .btn {
   margin-top: 5%;
@@ -162,12 +162,12 @@ p {
   background-size: 300% 100%;
   margin-left: 3vh;
   border-radius: 50px;
-  -moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   /* &.color-9 {
-        background-image: linear-gradient(to right, $blue-light, $blue-prim, #04befe, $blue-dark);
+        background-image: linear-gradient(to right, $red-light, $red-prim, #04befe, $red-dark);
 
     }*/
   --hover: white; }
@@ -223,17 +223,17 @@ p {
         font-size: 4rem; } }
   .btn-link:link, .btn-link:visited {
     font-size: 5rem;
-    background-image: linear-gradient(to right, #55beff, #0410b6);
+    background-image: linear-gradient(to right, #f12828, #951b1b);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-decoration: none; }
   .btn:hover {
     background-position: 100% 0;
-    -moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out; }
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out; }
   .btn:focus {
     outline: none; }
   .btn.pulse:hover, .btn.pulse:focus {
@@ -332,14 +332,14 @@ p {
 
 .header {
   height: 165vh;
-  background-image: linear-gradient(to right bottom, rgba(85, 190, 255, 0.8), rgba(4, 16, 182, 0.8));
+  background-image: linear-gradient(to right bottom, rgba(241, 40, 40, 0.8), rgba(149, 27, 27, 0.8));
   position: relative;
   background-size: cover;
   background-position: top;
   z-index: 999; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(85, 190, 255, 0.8), rgba(4, 16, 182, 0.8)); } }
+      background-image: linear-gradient(to right bottom, rgba(241, 40, 40, 0.8), rgba(149, 27, 27, 0.8)); } }
   @media only screen and (min-width: 160em) {
     .header {
       height: 170vh; } }
@@ -450,7 +450,7 @@ p {
 
 .skills {
   padding: 25rem 0;
-  background-image: linear-gradient(to right bottom, rgba(85, 190, 255, 0.8), rgba(4, 16, 182, 0.8));
+  background-image: linear-gradient(to right bottom, rgba(241, 40, 40, 0.8), rgba(149, 27, 27, 0.8));
   position: relative;
   background-size: cover;
   background-position: top; }
@@ -479,7 +479,7 @@ p {
         width: 100%; } }
   .skills .grad {
     font-size: 6rem;
-    background-image: linear-gradient(to right bottom, rgba(85, 190, 255, 0.8), rgba(4, 16, 182, 0.8));
+    background-image: linear-gradient(to right bottom, rgba(241, 40, 40, 0.8), rgba(149, 27, 27, 0.8));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
@@ -492,16 +492,7 @@ p {
 
 .projects {
   padding: 25rem 0;
-  position: relative;
-  /*@include respond(desk) {
-
-height: 235vh;
-}
-
-@include respond(desk4k) {
-
-  height: 200vh;
-}*/ }
+  position: relative; }
   @media only screen and (max-width: 56.25em) and (orientation: landscape) {
     .projects {
       height: 400vh; } }
@@ -528,7 +519,7 @@ height: 235vh;
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    transition: all .3s; }
+    transition: all 0.3s; }
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
       .projects .popup {
         -webkit-backdrop-filter: blur(10px);
@@ -548,7 +539,7 @@ height: 235vh;
       overflow: hidden;
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
-      transition: all .5s .2s; }
+      transition: all 0.5s 0.2s; }
       @media only screen and (max-width: 56.25em) and (orientation: landscape) {
         .projects .popup__content {
           padding: 0 15rem; } }
@@ -566,7 +557,7 @@ height: 235vh;
       font-size: 6rem;
       text-decoration: none;
       display: inline-block;
-      transition: all .2s;
+      transition: all 0.2s;
       line-height: 1; }
       @media only screen and (max-width: 87em) {
         .projects .popup__close:link, .projects .popup__close:visited {
@@ -577,7 +568,7 @@ height: 235vh;
           font-size: 4rem;
           right: 3.5rem; } }
     .projects .popup__close:hover {
-      color: #2B63A9; }
+      color: #d00606; }
     @media only screen and (min-width: 160em) {
       .projects .popup .p-cen {
         margin-left: 24vw; } }
@@ -685,7 +676,6 @@ height: 235vh;
     z-index: 0;
     transition: all 0.4s ease-out; }
   .projects .tile .text {
-    /*   z-index:99; */
     position: absolute;
     padding: 30px;
     height: calc(100% - 60px); }
@@ -711,7 +701,6 @@ height: 235vh;
     opacity: 0;
     transition: all 0.6s ease-in-out; }
   .projects .tile:hover {
-    /*   background-color:#99aeff; */
     box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
     transform: scale(1.05); }
   .projects .tile:hover img {
@@ -762,7 +751,7 @@ height: 235vh;
     text-transform: uppercase;
     display: inline-block; }
   .footer_link:hover, .footer_link:active {
-    color: #2B63A9;
+    color: #d00606;
     box-shadow: 0 1rem 2rem #000, 0.4; }
   .footer_copyright {
     font-size: 2rem;

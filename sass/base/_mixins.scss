@@ -4,65 +4,62 @@
 //NOTE: set media queries with min-wdith in order from the smallest to largest screen size;
 
 @mixin respond($breakpoint) {
-
-    //Portrait Mode
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { //600px
-            @content
-        };
+  //Portrait Mode
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      //600px
+      @content;
     }
+  }
 
-    @if $breakpoint == tabp {//(min-width: 38em) and
-        @media only screen and  (max-width: 56.25em) {
-            @content
-        };
+  @if $breakpoint == tabp {
+    //(min-width: 38em) and
+    @media only screen and (max-width: 56.25em) {
+      @content;
     }
+  }
 
-
-    @if $breakpoint == tabp-lg {//(min-width: 57em) and
-        @media only screen and  (max-width: 66em) {
-            @content
-        };
+  @if $breakpoint == tabp-lg {
+    //(min-width: 57em) and
+    @media only screen and (max-width: 66em) {
+      @content;
     }
+  }
 
-    @if $breakpoint == tabl {
-        @media only screen and (max-width: 87em) {
-            @content
-        };
+  @if $breakpoint == tabl {
+    @media only screen and (max-width: 87em) {
+      @content;
     }
+  }
 
-//NEW
-    @if $breakpoint == lapt {
-        @media only screen and (min-width: 90em) {
-            @content
-        };
+  @if $breakpoint == lapt {
+    @media only screen and (min-width: 90em) {
+      @content;
     }
+  }
 
-
-
-    @if $breakpoint == desk {
-        @media only screen and (min-width: 112.5em) {    
-            @content
-        };
+  @if $breakpoint == desk {
+    @media only screen and (min-width: 112.5em) {
+      @content;
     }
+  }
 
-    @if $breakpoint == desk4k {
-        @media only screen and (min-width: 160em) {
-            @content
-        };
+  @if $breakpoint == desk4k {
+    @media only screen and (min-width: 160em) {
+      @content;
     }
+  }
 
-    //Landscape
+  //Landscape
 
-    @if $breakpoint == tabpscape {
-        @media only screen and (max-width: 56.25em) and (orientation: landscape) {
-            @content
-        };
+  @if $breakpoint == tabpscape {
+    @media only screen and (max-width: 56.25em) and (orientation: landscape) {
+      @content;
     }
-
+  }
 }
 
 @mixin centerelement {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
