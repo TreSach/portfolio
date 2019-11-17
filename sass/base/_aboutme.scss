@@ -1,92 +1,129 @@
 .aboutme {
-  height: 1%;
-  background-color: $white;
-  @include section;
-  margin-top: -30vh;
-  position: relative;
-  z-index: 8;
-  padding: 5rem;
-  margin-top: 15vh;
+    @include section;
+    position: relative;
+    z-index: 8;
+    padding: 5rem;
+    background-image: url("https://images.unsplash.com/photo-1445251045505-59e1ff1e3127?auto=format&fit=crop&w=1431&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-attachment: fixed;
+  background-size: cover;
 
-  @include respond(lapt) {
-    height: 185vh;
-  }
-
-  @include respond(desk) {
-    //  padding: 40rem 0;
-    height: 180vh;
-  }
-
-  @include respond(desk4k) {
-    //  padding: 40rem 0;
-    height: 245vh; //325vh
-  }
-
-  @include respond(tabl) {
-    height: 200vh;
-  }
-  @include respond(tabp-lg) {
-    padding: 40rem 0;
-    margin-top: -15vh;
-  }
-
-  @include respond(tabpscape) {
-    padding: 40rem 0;
-    height: 350vh;
-    margin-top: -30vh;
-  }
-
-  @include respond(tabp) {
-    margin-top: -15vh;
-    padding: 40rem 0;
-  }
-
-  @include respond(phone) {
-    height: 1%;
-  }
-
-  &-img {
-    &__comp {
-      margin-top: 15vh;
-      -webkit-clip-path: circle(50% at 50% 50%);
-      clip-path: circle(50% at 50% 50%);
-      border-radius: 50%;
-      margin-left: 35%;
-
-      @include respond(desk) {
-        width: 35%;
-        margin-left: 30vw;
-      }
-      @include respond(desk4k) {
-        margin-left: 25vw;
-      }
-
-      @include respond(tabp) {
-        width: 55vw;
-        margin-top: 0;
-        display: block;
-        margin-left: 20%;
-      }
-
-      @include respond(tabp-lg) {
-        margin-top: 7vh;
-      }
-
-      @include respond(tabpscape) {
-        margin-left: 30%;
-      }
+    @include respond(lapt) {
+        height: 185vh;
     }
-  }
+
+      //NEW
+    @include respond(desk) {
+        //  padding: 40rem 0;
+          height: 180vh; 
+  
+      }
+
+       //NEW
+       @include respond(desk4k) {
+        //  padding: 40rem 0;
+          height: 245vh; //325vh 
+  
+      }
+
+   
+    @include respond(tabl) {
+       height: 100vh;
+    }
+    @include respond(tabp-lg) {
+       
+        padding: 30rem 0;
+     
+    }
+
+    @include respond(tabpscape) {
+        padding: 40rem 0;
+        height: 350vh;
+        margin-top: -30vh;
+    }
+
+    @include respond(tabp) {
+     margin-top: 0;
+        padding: 10rem 0;
+    }
+
+    @include respond(phone) {
+        margin-top: -16vh; 
+        padding: 20rem 0;
+    }
+
+    &-text {
+        color: white; 
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.6);
+
+        @include respond(phone) {
+            font-size: 4.8em;
+        }
+    }
+
+    &-img {
+
+
+
+        &__comp {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+
+            border-radius: 50%;
+           //  margin-left: 35%;
+            
+            //NEW
+            @include respond(desk) {
+            width: 35%;
+            margin-left: 30vw;
+             }
+             @include respond(desk4k) {
+    
+                margin-left: 25vw;
+            }
+        
+
+           
+
+        @include respond(tabp-lg) {
+            margin-top: 7vh;
+        }
+
+
+
+        @include respond(tabpscape) {
+            margin-left: 30%;
+        }
+            @include respond(tabp) {
+                width: 40vw;
+                margin-top: 0;
+                display: block;
+                margin-left: 27%;
+            } 
+
+            @include respond(phonel) {
+                width: 28vw;
+                margin-top: -40vh;
+                display: block; 
+                margin-left: 10%;
+            }
+
+
+        }
+
+    }
+
+
 }
 
+//NEW
 @include respond(desk) {
-  p.aboutme-text {
-    max-width: $g-width * 1.9;
-  }
+    p.aboutme-text {
+        max-width: $g-width*1.9;
+    }
 }
-
+//NEW
 @include respond(desk4k) {
-  p.aboutme-text {
-    max-width: $g-width * 2.5;
-  }
+    p.aboutme-text {
+        max-width: $g-width*2.5;
+    }
 }

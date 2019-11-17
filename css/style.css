@@ -29,63 +29,72 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Acme", sans-serif;
-  font-weight: 400;
+  font-family: "Rosario", sans-serif;
+  font-weight: 500;
   line-height: 1.7;
-  color: #777; }
+  color: #777;
+  background-color: #eee; }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
 
+@media only screen and (max-width: 56.25em) {
+  .body-wrap {
+    position: relative; } }
+
+.content-wrap {
+  margin-left: 37.5em; }
+  @media only screen and (max-width: 56.25em) {
+    .content-wrap {
+      top: 0;
+      left: 0;
+      margin-top: 55vh;
+      margin-left: 0; } }
+  @media only screen and (max-width: 51.875em) and (orientation: landscape) {
+    .content-wrap {
+      margin-left: 37.5em; } }
+
 .h1 {
   color: #fff;
   text-transform: uppercase;
-  backface-visibility: hidden;
-  margin-bottom: 6rem; }
+  backface-visibility: hidden; }
   @media only screen and (max-width: 56.25em) and (orientation: landscape) {
     .h1 {
       margin-top: 10em; } }
   .h1-name {
     display: block;
-    font-size: 10rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem; }
-    @media only screen and (max-width: 56.25em) {
-      .h1-name {
-        font-size: 8rem; } }
+    font-size: 3rem; }
     @media only screen and (max-width: 56.25em) and (orientation: landscape) {
       .h1-name {
-        font-size: 11rem; } }
+        font-size: 3em; } }
+    @media only screen and (max-width: 56.25em) {
+      .h1-name {
+        font-size: 3em; } }
   .h1-subtext {
     display: block;
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: 0.5rem; }
-    @media only screen and (max-width: 56.25em) and (orientation: landscape) {
-      .h1-subtext {
-        font-size: 4rem; } }
-    @media only screen and (max-width: 56.25em) {
-      .h1-subtext {
-        font-size: 2rem; } }
-    @media only screen and (max-width: 37.5em) {
-      .h1-subtext {
-        letter-spacing: 0.5rem; } }
+    font-size: 0.2rem;
+    font-weight: 700; }
 
 .h2 {
   font-size: 8rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #f12828, #951b1b);
+  background-image: linear-gradient(to right, #55beff, #0410b6);
+  background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: 0.2rem; }
+  color: transparent; }
   @media only screen and (max-width: 56.25em) {
     .h2 {
       font-size: 7rem; } }
   @media only screen and (max-width: 37.5em) {
     .h2 {
       font-size: 6rem; } }
+  .h2-name {
+    display: block;
+    font-family: "Rosario", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200; }
 
 .h3 {
   font-size: 2rem;
@@ -116,6 +125,11 @@ body {
   .h3-lg {
     font-size: 4rem; } }
 
+.h1, .h2, .h3, .h3-lg {
+  font-family: "Acme", sans-serif;
+  font-weight: 700;
+  line-height: 1.7; }
+
 #size {
   font-size: 1.2rem !important;
   margin-top: 15%; }
@@ -140,13 +154,21 @@ p {
     p {
       font-size: 2.8rem; } }
 
+.pro-info {
+  font-size: 2.5rem;
+  padding: 3rem; }
+
+.list {
+  font-size: 2.25rem;
+  margin-left: 20%; }
+
 .txt-link:link, .txt-link:visited {
-  color: #951b1b;
+  color: #0410b6;
   text-decoration: none;
   display: inline-block; }
 
 .txt-link:hover, .txt-link:active {
-  color: #f12828; }
+  color: #55beff; }
 
 .btn {
   margin-top: 5%;
@@ -154,20 +176,18 @@ p {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  margin: 160px;
   height: 55px;
   text-align: center;
-  border: 3px solid #fff;
+  border: 10px solid;
+  border-image: linear-gradient(45deg, #55beff, #0410b6) 1;
   background-color: transparent;
   background-size: 300% 100%;
-  margin-left: 3vh;
-  border-radius: 50px;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   /* &.color-9 {
-        background-image: linear-gradient(to right, $red-light, $red-prim, #04befe, $red-dark);
+        background-image: linear-gradient(to right, $blue-light, $blue-prim, #04befe, $blue-dark);
 
     }*/
   --hover: white; }
@@ -176,17 +196,12 @@ p {
       width: 16vw;
       height: 8vh;
       font-size: 2.5em;
-      border-radius: 100px;
-      margin-left: 6vw;
-      margin: 120px;
-      margin-top: 30vh; } }
+      border-radius: 100px; } }
   @media only screen and (min-width: 112.5em) {
     .btn {
       width: 300px;
       height: 85px;
       font-size: 30px;
-      margin-left: 1vw;
-      margin: 35px;
       margin-top: 30vh; } }
   @media only screen and (max-width: 56.25em) and (orientation: landscape) {
     .btn {
@@ -197,14 +212,11 @@ p {
     .btn {
       padding: 2vh;
       width: 200px;
-      height: 64px;
-      margin-left: 3vw;
-      margin: 165px; } }
+      height: 64px; } }
   @media only screen and (max-width: 56.25em) {
     .btn {
       width: 200px;
       height: 48px;
-      margin-left: 6vw;
       padding-top: 1vh; } }
   @media only screen and (max-width: 37.5em) {
     .btn {
@@ -223,26 +235,47 @@ p {
         font-size: 4rem; } }
   .btn-link:link, .btn-link:visited {
     font-size: 5rem;
-    background-image: linear-gradient(to right, #f12828, #951b1b);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-decoration: none; }
+    background-color: black;
+    color: #2c98fd;
+    text-decoration: none;
+    padding: 0.3em; }
   .btn:hover {
     background-position: 100% 0;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #fff; }
   .btn:focus {
     outline: none; }
+  .btn-icon {
+    color: #2c98fd;
+    padding-right: 0.3em; }
   .btn.pulse:hover, .btn.pulse:focus {
     animation: pulse 1s;
-    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0); }
+    box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+    color: #fff; }
 
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 var(--hover); } }
+
+.pulse {
+  --color: #0878e0;
+  --hover: #0854e0; }
+
+button {
+  color: var(--color);
+  transition: 0.25s; }
+  button:hover, button:focus {
+    border-color: var(--hover);
+    color: #fff; }
+
+.row-btn {
+  display: grid; }
+
+.div-btn {
+  margin: auto; }
 
 .cen-text {
   text-align: center !important; }
@@ -254,27 +287,27 @@ p {
   margin-bottom: 4rem !important; }
 
 .margbot-big {
-  margin-bottom: 8rem !important; }
+  margin-bottom: 2rem !important; }
 
 .margtop-big {
-  margin-top: 8rem !important; }
+  margin-top: 2rem !important; }
 
 .nav {
+  padding: 10px;
   width: 100%;
   font-size: 2rem !important;
   color: #fff;
-  position: absolute;
-  top: 0;
-  z-index: 9999;
-  text-align: right;
-  right: 5rem; }
-  @media only screen and (max-width: 56.25em) and (orientation: landscape) {
-    .nav {
-      margin-right: -7.5em; } }
+  position: relative;
+  text-align: left; }
   @media only screen and (max-width: 56.25em) {
     .nav {
-      right: 0;
       font-size: 3.5rem !important; } }
+  @media only screen and (max-width: 51.875em) and (orientation: landscape) {
+    .nav {
+      margin-left: 12%; } }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      margin-left: 5%; } }
 
 .row {
   max-width: 119rem;
@@ -331,61 +364,92 @@ p {
     width: calc(2 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
-  height: 165vh;
-  background-image: linear-gradient(to right bottom, rgba(241, 40, 40, 0.8), rgba(149, 27, 27, 0.8));
-  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 37.5em;
+  position: fixed;
+  overflow: auto;
+  background-image: linear-gradient(to right bottom, rgba(85, 190, 255, 0.8), rgba(4, 16, 182, 0.8)), url("../img/circuit.jpg");
   background-size: cover;
   background-position: top;
   z-index: 999; }
   @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
-      background-image: linear-gradient(to right bottom, rgba(241, 40, 40, 0.8), rgba(149, 27, 27, 0.8)); } }
-  @media only screen and (min-width: 160em) {
+      background-image: linear-gradient(to right bottom, rgba(85, 190, 255, 0.8), rgba(4, 16, 182, 0.8)), url("../img/circuit.jpg"); } }
+  @media only screen and (min-width: 90em) {
     .header {
-      height: 170vh; } }
-  @media only screen and (min-width: 112.5em) {
+      height: 100%; } }
+  @media only screen and (max-width: 87em) {
     .header {
-      height: 165vh; } }
+      height: 100%; } }
   @media only screen and (max-width: 56.25em) {
     .header {
-      height: 120vh; } }
-  @media only screen and (max-width: 56.25em) and (orientation: landscape) {
+      position: fixed;
+      width: 100%;
+      height: auto; } }
+  @media only screen and (max-width: 51.875em) and (orientation: landscape) {
     .header {
-      height: 260vh; } }
+      position: fixed;
+      width: 37.5em;
+      height: 100%; } }
   .header-text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+    text-align: center;
+    padding: 3.5rem; }
   .header_nav {
-    border-top: 1px solid #777;
-    padding-top: 2rem;
-    display: inline-block;
+    margin-top: 4vh;
+    display: block;
     list-style: none; }
     @media only screen and (max-width: 56.25em) {
       .header_nav {
         width: 100%;
-        text-align: center; } }
+        display: none; } }
+    .header_nav_mob {
+      display: inline-block;
+      list-style: none;
+      /* @include respond(tabl) {
+          display: none;
+      }*/ }
+      .header_nav_mob li {
+        float: left;
+        font-size: 1.2em; }
+        @media only screen and (max-width: 56.25em) {
+          .header_nav_mob li {
+            margin-left: 2em;
+            padding-right: 0.5em; } }
+        @media only screen and (max-width: 51.875em) and (orientation: landscape) {
+          .header_nav_mob li {
+            margin-left: 0em;
+            padding-right: 1em; } }
+        @media only screen and (max-width: 37.5em) {
+          .header_nav_mob li {
+            margin-left: 1em;
+            padding-right: 0.5em; } }
+      @media only screen and (max-width: 87em) {
+        .header_nav_mob {
+          display: none; } }
+      @media only screen and (max-width: 56.25em) {
+        .header_nav_mob {
+          display: inline-block; } }
   .header_item {
-    display: inline-block; }
+    display: block; }
     .header_item:not(:last-child) {
-      margin-right: 1.5rem; }
+      margin-bottom: 1.5rem; }
   .header_link:link, .header_link:visited {
     color: #f7f7f7;
     text-decoration: none;
     text-transform: uppercase;
-    display: inline-block; }
+    display: block; }
 
 .aboutme {
-  height: 1%;
-  background-color: #fff;
   padding: 25rem 0;
-  margin-top: -30vh;
   position: relative;
   z-index: 8;
   padding: 5rem;
-  margin-top: 15vh; }
+  background-image: url("https://images.unsplash.com/photo-1445251045505-59e1ff1e3127?auto=format&fit=crop&w=1431&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-attachment: fixed;
+  background-size: cover; }
   @media only screen and (min-width: 90em) {
     .aboutme {
       height: 185vh; } }
@@ -397,11 +461,10 @@ p {
       height: 245vh; } }
   @media only screen and (max-width: 87em) {
     .aboutme {
-      height: 200vh; } }
+      height: 100vh; } }
   @media only screen and (max-width: 66em) {
     .aboutme {
-      padding: 40rem 0;
-      margin-top: -15vh; } }
+      padding: 30rem 0; } }
   @media only screen and (max-width: 56.25em) and (orientation: landscape) {
     .aboutme {
       padding: 40rem 0;
@@ -409,17 +472,22 @@ p {
       margin-top: -30vh; } }
   @media only screen and (max-width: 56.25em) {
     .aboutme {
-      margin-top: -15vh;
-      padding: 40rem 0; } }
+      margin-top: 0;
+      padding: 10rem 0; } }
   @media only screen and (max-width: 37.5em) {
     .aboutme {
-      height: 1%; } }
+      margin-top: -16vh;
+      padding: 20rem 0; } }
+  .aboutme-text {
+    color: white;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.6); }
+    @media only screen and (max-width: 37.5em) {
+      .aboutme-text {
+        font-size: 4.8em; } }
   .aboutme-img__comp {
-    margin-top: 15vh;
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    border-radius: 50%;
-    margin-left: 35%; }
+    border-radius: 50%; }
     @media only screen and (min-width: 112.5em) {
       .aboutme-img__comp {
         width: 35%;
@@ -427,18 +495,24 @@ p {
     @media only screen and (min-width: 160em) {
       .aboutme-img__comp {
         margin-left: 25vw; } }
-    @media only screen and (max-width: 56.25em) {
-      .aboutme-img__comp {
-        width: 55vw;
-        margin-top: 0;
-        display: block;
-        margin-left: 20%; } }
     @media only screen and (max-width: 66em) {
       .aboutme-img__comp {
         margin-top: 7vh; } }
     @media only screen and (max-width: 56.25em) and (orientation: landscape) {
       .aboutme-img__comp {
         margin-left: 30%; } }
+    @media only screen and (max-width: 56.25em) {
+      .aboutme-img__comp {
+        width: 40vw;
+        margin-top: 0;
+        display: block;
+        margin-left: 27%; } }
+    @media only screen and (max-width: 51.875em) and (orientation: landscape) {
+      .aboutme-img__comp {
+        width: 28vw;
+        margin-top: -40vh;
+        display: block;
+        margin-left: 10%; } }
 
 @media only screen and (min-width: 112.5em) {
   p.aboutme-text {
@@ -449,8 +523,8 @@ p {
     max-width: 175rem; } }
 
 .skills {
-  padding: 25rem 0;
-  background-image: linear-gradient(to right bottom, rgba(241, 40, 40, 0.8), rgba(149, 27, 27, 0.8));
+  padding: 15rem 7rem;
+  background-image: linear-gradient(to right bottom, rgba(85, 190, 255, 0.8), rgba(4, 16, 182, 0.8));
   position: relative;
   background-size: cover;
   background-position: top; }
@@ -461,6 +535,10 @@ p {
     .skills {
       padding: 30rem 0;
       margin-top: 5vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .skills {
+      padding: 30rem 0;
+      margin-top: -20vh; } }
   .skills-box {
     background-color: rgba(255, 255, 255, 0.8);
     font-size: 1.5rem;
@@ -479,7 +557,7 @@ p {
         width: 100%; } }
   .skills .grad {
     font-size: 6rem;
-    background-image: linear-gradient(to right bottom, rgba(241, 40, 40, 0.8), rgba(149, 27, 27, 0.8));
+    background-image: linear-gradient(to right bottom, rgba(85, 190, 255, 0.8), rgba(4, 16, 182, 0.8));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
@@ -491,7 +569,7 @@ p {
         font-size: 10rem; } }
 
 .projects {
-  padding: 25rem 0;
+  padding: 5rem 7rem;
   position: relative; }
   @media only screen and (max-width: 56.25em) and (orientation: landscape) {
     .projects {
@@ -501,9 +579,11 @@ p {
       padding: 20rem 0; } }
   @media only screen and (max-width: 56.25em) {
     .projects {
-      height: 1%;
       padding: 10rem 0;
       margin-top: 15vh; } }
+  @media only screen and (max-width: 37.5em) {
+    .projects {
+      padding: 7rem 0; } }
   .projects-h3 {
     font-size: 5rem; }
     @media only screen and (max-width: 56.25em) {
@@ -519,7 +599,7 @@ p {
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s; }
+    transition: all .3s; }
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
       .projects .popup {
         -webkit-backdrop-filter: blur(10px);
@@ -539,7 +619,7 @@ p {
       overflow: hidden;
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
-      transition: all 0.5s 0.2s; }
+      transition: all .5s .2s; }
       @media only screen and (max-width: 56.25em) and (orientation: landscape) {
         .projects .popup__content {
           padding: 0 15rem; } }
@@ -557,7 +637,7 @@ p {
       font-size: 6rem;
       text-decoration: none;
       display: inline-block;
-      transition: all 0.2s;
+      transition: all .2s;
       line-height: 1; }
       @media only screen and (max-width: 87em) {
         .projects .popup__close:link, .projects .popup__close:visited {
@@ -568,7 +648,7 @@ p {
           font-size: 4rem;
           right: 3.5rem; } }
     .projects .popup__close:hover {
-      color: #d00606; }
+      color: #2B63A9; }
     @media only screen and (min-width: 160em) {
       .projects .popup .p-cen {
         margin-left: 24vw; } }
@@ -676,6 +756,7 @@ p {
     z-index: 0;
     transition: all 0.4s ease-out; }
   .projects .tile .text {
+    /*   z-index:99; */
     position: absolute;
     padding: 30px;
     height: calc(100% - 60px); }
@@ -701,6 +782,7 @@ p {
     opacity: 0;
     transition: all 0.6s ease-in-out; }
   .projects .tile:hover {
+    /*   background-color:#99aeff; */
     box-shadow: 0px 35px 77px -17px rgba(0, 0, 0, 0.64);
     transform: scale(1.05); }
   .projects .tile:hover img {
@@ -716,6 +798,32 @@ p {
     @media only screen and (max-width: 56.25em) {
       .projects .h1-pro {
         font-size: 5rem; } }
+  .projects .pro-img {
+    max-width: 900px;
+    height: 506.25px; }
+    @media only screen and (min-width: 160em) {
+      .projects .pro-img {
+        width: 1200px;
+        height: 800px; } }
+    @media only screen and (min-width: 112.5em) {
+      .projects .pro-img {
+        width: 1080px;
+        height: 628px; } }
+    @media only screen and (max-width: 87em) {
+      .projects .pro-img {
+        width: 1080px; } }
+    @media only screen and (max-width: 66em) {
+      .projects .pro-img {
+        width: 100vw;
+        height: 30vh; } }
+    @media only screen and (max-width: 56.25em) {
+      .projects .pro-img {
+        width: 100vw;
+        height: 50vh; } }
+    @media only screen and (max-width: 56.25em) and (orientation: landscape) {
+      .projects .pro-img {
+        width: 100vw;
+        height: 125vh; } }
 
 .footer {
   background-color: #333;
@@ -751,7 +859,7 @@ p {
     text-transform: uppercase;
     display: inline-block; }
   .footer_link:hover, .footer_link:active {
-    color: #d00606;
+    color: #2B63A9;
     box-shadow: 0 1rem 2rem #000, 0.4; }
   .footer_copyright {
     font-size: 2rem;
