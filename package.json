@@ -4,12 +4,23 @@
   "description": "Sach Purvis's Web Portfolio",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "sass css/sass/main.scss css/style.css -w"
   },
   "author": "Sachel Purvis",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.11.0"
   },
-  "dependencies": {}
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TreSach/portfolio.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/TreSach/portfolio/issues"
+  },
+  "homepage": "https://github.com/TreSach/portfolio#readme"
 }
