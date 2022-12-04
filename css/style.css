@@ -572,6 +572,12 @@ article.active {
   line-height: 1.6;
 }
 
+.timeline-list .deg {
+  color: var(--vegas-gold);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+}
+
 .timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
